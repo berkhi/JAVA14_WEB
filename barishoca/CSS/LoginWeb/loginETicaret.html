@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-bottom: 10px;
+        }
+        form{
+            margin: 0 auto;
+            width: 200px;
+            border: 1px solid maroon;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div><label for="username">Kullanıcı Adı:</label><input type="text" name="username" id="username"></div>
+        <div><label for="password">Şifre:</label><input type="password" name="password" id="password"></div>
+
+        <div><button onclick="login()" type="button">Giriş Yap</button></div>
+    </form>
+    <script>
+        function login(){
+            let username= document.getElementById('username').value;
+            let password= document.getElementById('password').value;
+
+            // http://localhost:9090/auth/login?username=buket&password=123
+
+            fetch('http://34.168.7.56/auth/login',{
+                method: 'POST',
+                headers: {
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify({
+                    username,
+                    password
+                })
+            }).then((response)=>{
+                return response.text();
+            }).then((data)=>{
+                console.log('Data....:',data);
+            })
+
+        }
+    </script>
+</body>
+</html>

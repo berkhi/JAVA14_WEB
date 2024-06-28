@@ -1,0 +1,54 @@
+.container{
+    border: 2px solid ;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+}
+.row{
+    border: 2px solid;
+    margin: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.col{
+    border: 2px solid ;
+    border-radius: 10px;
+    margin: 3px;
+    box-shadow: 10px 10px 5px 3px rgba(0,0,0,0.75);
+}
+.row-1{
+    display: inline-block;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+}
+.row-2{
+    display: inline-block;
+    flex-direction: column;
+
+}
+
+
+
+.flex1{
+    flex:1;
+}
+.flex2{
+    flex:2;
+}
+.flex3{
+    flex:3;
+}
+.flex4{
+    flex:4;
+}
+.flex6{
+    flex:6;
+}
+.flex8{
+    flex:8;
+}
+.flex10{
+    flex:10;
+}

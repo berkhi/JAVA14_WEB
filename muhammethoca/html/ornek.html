@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel ve Aile Bilgileri Formu</title>
+</head>
+<body>
+    <h1>Kişisel Bilgiler Formu</h1>
+    <form>
+        <fieldset style="width: 20%;">
+            <legend>Kişisel Bilgiler</legend>
+            <label for="ad">Ad:</label>
+            <input type="text" id="ad" name="ad" required><br><br>
+
+            <label for="soyad">Soyad:</label>
+            <input type="text" id="soyad" name="soyad" required><br><br>
+
+            <label for="dogumTarihi">Doğum Tarihi:</label>
+            <input type="date" id="dogumTarihi" name="cocuk1DogumTarihi"><br><br>
+
+            <label for="adres">Adres:</label>
+            <input type="text" id="adres" name="adres" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="cinsiyet">Cinsiyet:</label><br>
+            <input type="radio" id="erkek" name="cinsiyet" value="erkek">
+            <label for="erkek">Erkek</label><br>
+            <input type="radio" id="kadin" name="cinsiyet" value="kadin">
+            <label for="kadin">Kadın</label><br><br>
+        </fieldset>
+
+        <fieldset style="width: 20%;">
+            <legend>Aile Bilgileri</legend>
+            <h3>Eş Bilgileri</h3>
+            <label for="esAd">Eşin Adı:</label>
+            <input type="text" id="esAd" name="esAd"><br><br>
+
+            <label for="esSoyad">Eşin Soyadı:</label>
+            <input type="text" id="esSoyad" name="esSoyad"><br><br>
+
+            <h3>Çocuk Bilgileri</h3>
+            <label for="cocuk1Ad">Çocuğun Adı:</label>
+            <input type="text" id="cocuk1Ad" name="cocuk1Ad"><br><br>
+
+            <label for="cocuk1DogumTarihi">Çocuğun Doğum Tarihi:</label>
+            <input type="date" id="cocuk1DogumTarihi" name="cocuk1DogumTarihi"><br><br>
+
+            <label for="cocuk2Ad">Çocuğun Adı:</label>
+            <input type="text" id="cocuk2Ad" name="cocuk2Ad"><br><br>
+
+            <label for="cocuk2DogumTarihi">Çocuğun Doğum Tarihi:</label>
+            <input type="date" id="cocuk2DogumTarihi" name="cocuk2DogumTarihi"><br><br>
+
+            <h3>Aile İletişim Bilgileri</h3>
+            <label for="acilDurumKisi">Acil Durumda İletişime Geçilecek Kişi:</label>
+            <input type="text" id="acilDurumKisi" name="acilDurumKisi"><br><br>
+
+            <label for="acilDurumTelefon">Acil Durum Telefon Numarası:</label>
+            <input type="tel" id="acilDurumTelefon" name="acilDurumTelefon"><br><br>
+        </fieldset>
+
+        <fieldset style="width: 20%;">
+            <legend>İş Bilgileri</legend>
+            <label for="isUnvani">İş Ünvanı:</label>
+            <input type="text" id="isUnvani" name="isUnvani" required><br><br>
+
+            <label for="sirketAdi">Şirket Adı:</label>
+            <input type="text" id="sirketAdi" name="sirketAdi" required><br><br>
+
+            <label for="departman">Departman:</label>
+            <input type="text" id="departman" name="departman" required><br><br>
+
+            <label for="isTelefonu">İş Telefon Numarası:</label>
+            <input type="tel" id="isTelefonu" name="isTelefonu" required><br><br>
+
+            <label for="iseBaslamaTarihi">İşe Başlama Tarihi:</label>
+            <input type="date" id="iseBaslamaTarihi" name="iseBaslamaTarihi" required><br><br>
+        </fieldset>
+
+        <input type="submit" value="Gönder">
+
+    </form>
+</body>
+</html>

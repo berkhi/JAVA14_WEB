@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="ornek3.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row flex2">
+      <div class="col flex1">
+        <div class="row-1 flex3">
+          <label class="label-table">id</label>
+          <input id="id1" type="text" name="id" />
+          <label class="label-table">il</label>
+          <input id="il1" type="text" name="il" />
+        </div>
+        <div class="row-2 flex3">
+          <label class="label-table">ad</label>
+          <input id="ad1" type="text" name="ad" />
+          <label class="label-table">soyad</label>
+          <input id="soyad1" type="text" name="soyad" />
+        </div>
+        <div class="row-1 flex3">
+          <button onclick="gonder()">Gonder</button>
+        </div>
+      </div>
+    </div>
+    <div class="row flex8">
+      <div class="col flex8">
+        <div class="down-bar">
+          <table class="table-soft">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>ad</th>
+                <th>soyad</th>
+                <th>il</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <tr>
+                <td>1</td>
+                <td>Berk</td>
+                <td>Hayta</td>
+                <td>Istanbul</td>
+                <td>
+                  <div class="left-button">
+                    <button onclick="removeRow(this)">
+                      <img style="width: 15px" src="images/remove.png" alt="" />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Serkan</td>
+                <td>Güner</td>
+                <td>Isparta</td>
+                <td>
+                  <div class="left-button">
+                    <button onclick="removeRow(this)">
+                      <img style="width: 15px" src="images/remove.png" alt="" />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Berkay</td>
+                <td>Guzel</td>
+                <td>İstanbul</td>
+                <td>
+                  <div class="left-button">
+                    <button onclick="removeRow(this)">
+                      <img style="width: 15px" src="images/remove.png" alt="" />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function gonder() {
+      const id = document.getElementById('id1').value;
+      const ad = document.getElementById('ad1').value;
+      const soyad = document.getElementById('soyad1').value;
+      const il = document.getElementById('il1').value;
+
+      const tableBody = document.getElementById('table-body');
+
+      const newRow = document.createElement('tr');
+
+      newRow.innerHTML = `
+        <td>${id}</td>
+        <td>${ad}</td>
+        <td>${soyad}</td>
+        <td>${il}</td>
+        <td>
+          <div class="left-button">
+            <button onclick="removeRow(this)">
+              <img style="width: 15px" src="images/remove.png" alt="" />
+            </button>
+          </div>
+        </td>
+      `;
+
+      tableBody.appendChild(newRow);
+
+      document.getElementById('id1').value = '';
+      document.getElementById('ad1').value = '';
+      document.getElementById('soyad1').value = '';
+      document.getElementById('il1').value = '';
+    }
+
+    function removeRow(button) {
+      button.closest('tr').remove();
+    }
+  </script>
+</body>
+</html>

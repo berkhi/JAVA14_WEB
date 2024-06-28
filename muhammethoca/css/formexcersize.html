@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        height: 900px;
+       
+      }
+
+      .left-bar {
+        border: 1px solid orange;
+        width: 30%;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .left-bar button {
+        width: 90%;
+        height: 18%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: large;
+      }
+
+      button:hover {
+        background-color: brown;
+      }
+
+      .body {
+        width: 70%;
+        border: 1px solid red;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-left: 10px;
+      }
+
+      .right-top-bar,
+      .right-bottom-bar {
+        border: 1px solid red;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+
+      .right-top-bar {
+        height: 30%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .right-bottom-bar {
+        height: 68%;
+        margin-top: 2%;
+      }
+
+      .inputs1,
+      .inputs2,
+      .inputs3 {
+        width: 33%;
+        margin: 1%;
+      }
+      img{
+        max-height: 80%;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        margin-top: 5px;
+      }
+
+      textarea {
+        height: 55px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      table {
+        width: 100%;
+        text-align: center;
+        
+      }
+      th,
+      td {
+        border: 1px solid goldenrod;
+        padding: 5px;
+      }
+
+      th {
+        padding: 15px;
+        background-color: rgb(204, 204, 204);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-bar">
+        <button>
+          <a href="https://www.google.com" target="_blank">GOOGLE</a>
+        </button>
+        <button>
+          <a href="https://www.google.com" target="_blank">JAVA</a>
+        </button>
+        <button>
+          <a href="https://www.google.com" target="_blank">SPRING</a>
+        </button>
+        <button>
+          <a href="https://www.google.com" target="_blank">BOOTSTRAP</a>
+        </button>
+        <button>
+          <a href="https://www.google.com" target="_blank">AMAZON</a>
+        </button>
+      </div>
+
+      <div class="body">
+        <div class="right-top-bar">
+          <div class="inputs1">
+            <label>Ad</label><br />
+            <input type="text" name="ad" id="ad" />
+
+            <label>Soyad</label><br />
+            <input type="text" name="soyad" id="soyad" />
+
+            <label>Cinsiyet</label><br />
+            <select name="cinsiyet" id="cinsiyet">
+              <option value="">Seçiniz</option>
+              <option value="erkek">Erkek</option>
+              <option value="kadin">Kadın</option>
+            </select>
+          </div>
+
+          <div class="inputs2">
+            <label for="datetime">Date Time Picker</label>
+            <input type="date" name="datetime" id="datetime" />
+
+            <label for="hakkinda">Hakkında</label>
+            <textarea
+              name="hakkinda"
+              id="hakkinda"
+              placeholder="Giriniz"
+            ></textarea>
+          </div>
+
+          <div class="inputs3">
+            <img src="https://picsum.photos/200/200" alt="Doğa Resmi" />
+          </div>
+        </div>
+        <div class="right-bottom-bar">
+          <table>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Ad</th>
+                <th>Adres</th>
+                <th>Telefon</th>
+                <th>Düzenle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Muhammet Hoca</td>
+                <td>Ankara</td>
+                <td>0 555 999 5566</td>
+                <td>
+                  <img
+                    src="Pen-icon-by-rudezstudio.jpg"
+                    style="height: 20px; width: 30px; border: 1px solid red"
+                    alt=""
+                  /><img
+                    src="x_icon_150997.webp"
+                    style="height: 20px; width: 30px; border: 1px solid red"
+                    alt=""
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Deniz Hoca</td>
+                <td>Ankara</td>
+                <td>0 555 999 5566</td>
+                <td>
+                  <img
+                    src="Pen-icon-by-rudezstudio.jpg"
+                    style="height: 20px; width: 30px; border: 1px solid red"
+                    alt=""
+                  /><img
+                    src="x_icon_150997.webp"
+                    style="height: 20px; width: 30px; border: 1px solid red"
+                    alt=""
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bahar Hoca</td>
+                <td>Ankara</td>
+                <td>0 555 999 5566</td>
+                <td>
+                  <img
+                    src="Pen-icon-by-rudezstudio.jpg"
+                    style="height: 20px; width: 30px; border: 1px solid red"
+                    alt=""
+                  /><img
+                    src="x_icon_150997.webp"
+                    style="height: 20px; width: 30px; border: 1px solid red"
+                    alt=""
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Güneş Hoca</td>
+                <td>Ankara</td>
+                <td>0 555 999 5566</td>
+                <td>
+                  <img
+                    src="Pen-icon-by-rudezstudio.jpg"
+                    style="height: 20px; width: 30px; border: 1px solid red"
+                    alt=""
+                  /><img
+                    src="x_icon_150997.webp"
+                    style="height: 20px; width: 30px; border: 1px solid red"
+                    alt=""
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
