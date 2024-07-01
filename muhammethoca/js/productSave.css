@@ -1,0 +1,137 @@
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    
+}
+.colu{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 10px ;
+    flex-wrap: wrap;
+    
+       
+}
+.colu-2{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 10px ;
+    
+
+       
+}
+.colh{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    height: 90vh;
+    border: 2px solid red;
+    border-radius: 10px ;
+
+    
+}
+.form {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+ 
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.form-group label {
+    margin-bottom: 5px;
+}
+ 
+.form-group input,
+.form-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+ 
+.ekle-btn {
+    grid-column: span 2;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+ 
+.ekle-btn:hover {
+    background-color: #219150;
+}
+.btn{
+    display: block;
+    border: 1px solid seagreen;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: #219150;
+    padding: 10px 40px ;
+
+}
+.col-1{flex: 1;}.col-2{flex: 2;}.col-3{flex: 3;}
+.col-4{
+    flex: 4;
+    /* flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 4; */
+}
+img{
+    margin: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.border{
+    border: 1px dotted chocolate;
+    border-radius: 10px;
+}
+.label-get{
+    width: 50%;
+    padding: 4px;
+    border: 1px solid rgb(211, 210, 210);
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+.col:hover{
+    box-shadow: 10px 10px 5px 3px rgba(0,0,0,0.75);
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+   justify-content: space-between;
+    flex: 1;
+    
+}
+
+a:link {
+
+    text-decoration:none;
+
+}

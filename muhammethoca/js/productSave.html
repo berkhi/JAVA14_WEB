@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="productSave.css">
+</head>
+<body>
+    <div class="container">
+        <div class="colh col-1">
+            <div>
+                <div class="form-left">
+                    <button class="btn" onclick="">Urun Ekle</button>
+                    <a href="http://127.0.0.1:5500/muhammethoca/js/productList.html"> <button id="redirectButton" class="btn" onclick="" >  Urun Listele    </button> </a>
+                   
+
+                </div>
+            </div>
+        </div>
+        <div class="colu-2 col-4">
+            <div class="form">
+                <div class="form-group">
+                    <label for="ad">ad</label>
+                    <input type="text" id="ad">
+                </div>
+                <div class="form-group">
+                    <label for="marka">marka</label>
+                    <select id="marka">
+                        <option value="">Seçiniz</option>
+                        <option value="Apple">Apple </option>
+                        <option value="Dell">Dell </option>
+                        <option value="HP">HP </option>
+                        <option value="Lenovo">Lenovo </option>
+                        <option value="ASUS">ASUS </option>
+
+
+
+
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="model">model</label>
+                    <select id="model">
+                        <option value="">Seçiniz</option>
+                        <option value="MacBook Air">MacBook Air </option>
+                        <option value="XPS 13 (9310)">XPS 13 (9310)</option>
+                        <option value="Spectre x360 14">Spectre x360 14</option>
+                        <option value="ThinkPad X1 Carbon">ThinkPad X1 Carbon </option>
+                        <option value="ROG Zephyrus G14">ROG Zephyrus G14</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fiyat">fiyat</label>
+                    <input type="text" id="fiyat">
+                </div>
+                <div class="form-group">
+                    <label for="stok">stok</label>
+                    <input type="text" id="stok">
+                </div>
+                <button class="ekle-btn" onclick="ekle()">Ekle</button>
+            </div>
+        </div>
+    </div>
+    <script src="ornek2.js"></script>
+</body>
+</html>

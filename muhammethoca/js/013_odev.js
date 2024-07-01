@@ -1,25 +1,44 @@
 const userList = [];
 let editUserId = -1;
+/* tabloYukle(); */
 function tabloYukle(){
     let tabloUserList = document.getElementById('userList');
     tabloUserList.innerHTML = '';
-    userList.forEach((u,index)=>{
-        tabloUserList.innerHTML += `<tr  id="${index}">
-        <td>${index+1}</td>
-        <td>${u.ad} ${u.soyad}</td>
-        <td>${u.adres}</td>
-        <td>${u.yas}</td>
-        <td>
-            <button onclick="sil(${index})"> X </button>
-            <button onclick="duzenle(${index})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Edit
-            </button>
-        </td>
-    </tr>`; 
-    }); 
+    fetch('http://localhost:9090/user/get-all', {
+        method: 'GET',
+        mode: 'cors'
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data=> data.json())
+    .then(response=>{
+        userList=response;
+        userList.forEach((u,index)=>{
+            tabloUserList.innerHTML += `<tr  id="${index}">
+            <td>${u.id}</td>
+            <td>${u.ad} ${u.soyad}</td>
+            <td>${u.adres}</td>
+            <td>${u.yas}</td>
+            <td>
+                <button onclick="sil(${index})"> X </button>
+                <button onclick="duzenle(${index})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Edit
+                </button>
+            </td>
+        </tr>`; 
+        }); 
+    })
+    .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+    });
 }
 function sil(index){
-    userList.splice(index,1);
+    //userList.splice(index,1);
+    let id = userList[index].id;
     tabloYukle();
 }
 function duzenle(index){
@@ -52,29 +71,32 @@ function ekle(){
     let soyad = document.getElementById('soyad').value;
     let adres = document.getElementById('adres').value;
     let yas = document.getElementById('yas').value;
-    /***
-     * Eğer bir object oluşturylacak ise,
-     * Key:Value şeklinde oluşturulmalıdır.
-     * {
-     *  ad : "Ahmet",
-     *  soyad: "TAŞ"
-     * }
-     * Ancak, bir değişken adı, Key ile aynı ismi taşıyor ise
-     * let ad = "Ahmet";
-     * let soyad = "TAŞ"; 
-     * şeklinde ise Key ayrıca yazılmaz, çünkü değişkenin adı
-     * Key olarak değişkenin değeri Value olarak atanır.
-     * {
-     *  ad,
-     *  soyad
-     * }
-     * 
-     */
-    userList.push({
-        ad,
-        soyad,
-        adres,
-        yas
+
+    fetch('http://localhost:9090/user/add-user', {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        mode: 'cors',
+        body: JSON.stringify({
+            ad,
+            soyad,
+            adres,
+            yas
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert("Kayıt başarılı");
+        tabloYukle();
+    })
+    .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+        alert("Kayıt başarısız: " + error.message);
     });
-    tabloYukle();
 }
