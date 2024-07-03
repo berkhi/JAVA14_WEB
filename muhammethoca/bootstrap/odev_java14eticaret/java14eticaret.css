@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.left-column, .right-column {
+    min-height: 450px;
+}
+
+h1{
+    color: white;
+}
+
+.left-column{
+    background-image: url('https://image.lexica.art/md2_webp/37ebc632-041e-41fe-8619-6b64fb5c919e');
+    border-radius: 10px;
+}
+
+.right-column{
+    background-color: rgb(235, 142, 21);
+    border-radius: 10px;
+}
+
+.contact-cart{
+    border-radius: 10px;
+    background-color: rgb(235, 217, 60);
+}
+
+.title-container{
+    border-bottom: 2px solid black;
+}

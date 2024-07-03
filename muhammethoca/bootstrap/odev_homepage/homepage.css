@@ -1,0 +1,68 @@
+.container{
+    border: 1px solid purple;
+    border-radius: 15px; 
+    padding: 20px; 
+}
+.row{
+    /* border: 1px solid red; */
+}
+.col{
+    border: 1px solid gray;
+    border-radius: 10px; 
+    /* margin: 5px; */ 
+    padding: 10px; 
+}
+.logo-header img{
+    width: 60%;
+    max-height: 150px;
+    border-radius: 50px;
+}
+img{
+    /* border: 2px solid blue; */
+    border-radius: 50px;
+    display: block;
+    
+}
+.top-content{
+    text-align: center;
+}
+.top-content img{
+    width: 100px;
+    border: 1px solid red;
+}
+.btn-group-vertical button{
+    margin-bottom: 10px;
+    width: 90;
+}
+.btnExit{
+    margin-top: 270px;
+}
+
+
+.content {
+    flex-wrap: wrap;
+}
+  
+.content-box-upper {
+    border: 1px solid orange;
+    border-left: 3px solid blue;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.content-box-lower {
+    border: 1px solid orange;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    display: block;
+}
+
+.widget-logo img {
+    border: 3px solid yellow;
+    width: 50%;
+    height: 90%;
+    margin-left: 40%;
+}
