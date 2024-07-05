@@ -1,0 +1,141 @@
+.header-top{
+    background-color: #5fa4d3;
+    padding: 10px 0; 
+}
+/***
+padding: 10px -> tüm iç alanları 10px itekler
+padding-left: 10px -> sadece solu 10px itekler
+padding: 10px 0; -> [top,bottom] [left,right]
+*/
+.project-padding{
+    padding: 0 10%;
+}
+
+.header-nav{
+    padding: 24px 0;
+}
+
+.logo-left{
+    color: #3382b7;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.logo-right{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.text-span{
+    font-size: small;
+}
+.text-label{
+    font-size: medium;
+    color: #d8b609;
+}
+
+.bottom-border{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.banner-padding{
+    padding: 10px;
+}
+
+.banner-left{
+    background-image: url('/img/1.jpg');
+    min-height: 670px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-right: 5px;
+    border-radius: 10px;
+    padding-top: 8%;
+    padding-left: 10%;
+}
+
+.banner-right{
+    background-image: url('/img/2.png');
+    min-height: 670px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+    padding-top: 8%;
+    padding-left: 10%;
+}
+
+.span-box{
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(240,9,34,1) 0%, rgba(230,46,88,1) 35%, rgba(250,250,250,1) 100%);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.offer-header{
+    margin-top: 20px;
+    color: #3382b7;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.shop-now{
+    margin-top: 10px;
+    border: 1px solid rgb(195, 194, 194);
+    padding: 10px 55px;
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: large;
+}
+
+.shop-now:hover{
+    background-color: #5fa4d3;
+    color: white;
+}
+
+.service-container{
+    background-color: rgb(227, 226, 226);
+    padding: 5% 8%;
+    border-radius: 8px;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.service-container:hover{
+    background-color: #5fa4d3;
+    color: white;
+}
+
+.ion{
+    font-size: 40px;
+    color: rgba(214, 210, 210, 0.925);
+}
+
+.service-h3{
+    font-size: 14px;
+    font-weight: bolder;
+    color: #3382b7;
+}
+
+.service-h6{
+    font-size: 12px;
+}
+
+.product{
+    padding: 2% 3%;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 10px;
+    min-height: 400px;
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.product:hover{
+    box-shadow: 2px 1px 18px 0px rgba(185, 184, 184, 0.59);
+}
